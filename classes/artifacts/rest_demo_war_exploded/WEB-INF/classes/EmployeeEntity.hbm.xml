@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="db.EmployeeEntity" table="employee" schema="public" catalog="FoodMartDW">
+        <property name="employeeId">
+            <column name="employee_id" sql-type="int4" not-null="true"/>
+        </property>
+        <property name="fullName">
+            <column name="full_name" sql-type="varchar" length="50"/>
+        </property>
+        <property name="firstName">
+            <column name="first_name" sql-type="varchar" length="50"/>
+        </property>
+        <property name="lastName">
+            <column name="last_name" sql-type="varchar" length="50"/>
+        </property>
+        <property name="positionId">
+            <column name="position_id" sql-type="int4"/>
+        </property>
+        <property name="positionTitle">
+            <column name="position_title" sql-type="varchar" length="50"/>
+        </property>
+        <property name="storeId">
+            <column name="store_id" sql-type="int4"/>
+        </property>
+        <property name="departmentId">
+            <column name="department_id" sql-type="int4"/>
+        </property>
+        <property name="birthDate">
+            <column name="birth_date" sql-type="timestamp"/>
+        </property>
+        <property name="hireDate">
+            <column name="hire_date" sql-type="timestamp"/>
+        </property>
+        <property name="endDate">
+            <column name="end_date" sql-type="timestamp"/>
+        </property>
+        <property name="salary">
+            <column name="salary" sql-type="float8" precision="17" scale="17"/>
+        </property>
+        <property name="supervisorId">
+            <column name="supervisor_id" sql-type="int4"/>
+        </property>
+        <property name="educationLevel">
+            <column name="education_level" sql-type="varchar" length="50"/>
+        </property>
+        <property name="maritalStatus">
+            <column name="marital_status" sql-type="varchar" length="1"/>
+        </property>
+        <property name="gender">
+            <column name="gender" sql-type="varchar" length="1"/>
+        </property>
+        <property name="managementRole">
+            <column name="management_role" sql-type="varchar" length="20"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3574564129">
+    <data-source source="LOCAL" name="PostgreSQL - FoodMartDW@localhost" uuid="2e7989bf-244e-45f0-b739-fad58505d186">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/FoodMartDW</jdbc-url>
+      <libraries>
+        <library>
+          <url>file://$PROJECT_DIR$/lib/postgresql-9.3-1100.jdbc4.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
