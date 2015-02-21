@@ -1,6 +1,6 @@
 package servers;
 
-import clients.models.SalesFactResponseModel;
+import clients.models.EmployeeResponseModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import db.EmployeeEntity;
@@ -30,11 +30,11 @@ public class DbServer {
 
     @GET
     @Produces("application/json")
-    @Path("/sales_fact/{offset}-{limit}")
-    public Response getSalesFact(@PathParam("offset") Long offset, @PathParam("limit") Long limit) {
+    @Path("/employee/{offset}-{limit}")
+    public Response getEmployee(@PathParam("offset") Long offset, @PathParam("limit") Long limit) {
         final Session session = sessionFactory.openSession();
         final String selectQuery = "from EmployeeEntity";
-        final String countQuery = "select count(*) from employee";
+        final String countQuery = "SELECT COUNT(*) FROM employee";
         final SQLQuery countSqlQuery = session.createSQLQuery(countQuery);
         final long total = ConvertHelper.ToLong(countSqlQuery.uniqueResult());
 
@@ -47,7 +47,7 @@ public class DbServer {
         final Query selectSqlQuery = session.createQuery(selectQuery).setFirstResult(offset.intValue())
                 .setMaxResults(limit.intValue() - offset.intValue());
         final ArrayList<EmployeeEntity> list = (ArrayList<EmployeeEntity>) selectSqlQuery.list();
-        final SalesFactResponseModel model = new SalesFactResponseModel();
+        final EmployeeResponseModel model = new EmployeeResponseModel();
 
         model.setItems(list);
         model.setOffset(limit);

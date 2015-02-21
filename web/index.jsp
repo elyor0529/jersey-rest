@@ -51,7 +51,7 @@
 
     <div class="row marketing">
         <ul>
-            <li><a href="<%=RestSettings.BASE_URI%>/db/sales_fact/100-150">Sales Fact</a></li>
+            <li><a href="<%=RestSettings.BASE_URI%>/db/employee/100-25">Sales Fact</a></li>
         </ul>
     </div>
 

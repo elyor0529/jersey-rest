@@ -1,6 +1,6 @@
 package clients;
 
-import clients.models.SalesFactResponseModel;
+import clients.models.EmployeeResponseModel;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -11,7 +11,7 @@ public class Client {
     public static void main(String[] args) {
         final long start = 100;
         final long length = 50;
-        final SalesFactResponseModel model = SalesFactClient.getSalesFactResponse(start, length);
+        final EmployeeResponseModel model = SalesFactClient.getEmployeeResponse(start, length);
         final GsonBuilder builder = new GsonBuilder()
                 .setPrettyPrinting()
                 .serializeNulls()

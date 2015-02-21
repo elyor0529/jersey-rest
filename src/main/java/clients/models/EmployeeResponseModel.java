@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Created by elyor on 2/21/2015.
  */
-public class SalesFactResponseModel implements Serializable {
+public class EmployeeResponseModel implements Serializable {
 
     private Long limit;
     private Long offset;
